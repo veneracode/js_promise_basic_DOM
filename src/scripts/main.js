@@ -11,16 +11,14 @@ const promise2 = new Promise ((_, reject) => {
   }, 3000)
 })
 
-const newMessage (text, isErorr = false) => {
+function newMessage (text, isErorr = false) => {
   const newMessage = document.createElement('div');
-  newMessage.classList = ('message');
-  if (isErorr) {
+  newMessage.classList.add = ('message');
+  if (isError) {
     newMessage.classList = ('error-message')
   }
     newMessage.textContent = text;
     document.body.appendChild(newMessage);
-
-
   }
 
 
